@@ -330,10 +330,20 @@
         element.className = arr1.join(" ");
       }
 
+      function getWidth() {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.documentElement.clientWidth
+        );
+      }
+
       function hamburgerCollapse(){
         var x = document.getElementById("myNavBar");
         var k = document.getElementById("navbar-brand-container");
-        if (x.className === "topnav"){
+        if (x.className === "topnav" && getWidth()<=1000){
           x.className += " responsive";
           
           k.style="display:none";
