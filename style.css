@@ -504,6 +504,7 @@ section {
 #publications {
   height: auto;
   margin-top: 50px;
+  padding-top: 40px;
 }
 
 #publications .row {
